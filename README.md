@@ -1,4 +1,4 @@
-# weather-dashboard
+# weather-dashboard ⛅️
 Server-Side APIs Challenge
 
 ## Description

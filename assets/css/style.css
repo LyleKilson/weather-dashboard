@@ -1,17 +1,110 @@
+/* background-img */
 body {
   background-image: url(../images/rain-background.jpg);
-  /* background-repeat: no-repeat; */
 }
 
 header {
-  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
 }
 
+header h1 {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* search bar input */
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search_input {
+  color: black;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  width: 150px;
+  caret-color: black;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon {
+  background: #6c757d;
+  color: #fff;
+}
+
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+/* city list */
 li {
-   background-color: transparent!important;
-   font-weight: bolder;
+  background-color: transparent !important;
+  font-weight: bolder;
 }
 
 .list-group-item {
-    border: 1px solid #fff;
+  border: 1px solid #fff;
+}
+
+a:hover {
+  color: #6c757d !important;
+  background-color: #fff;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+/* current weather */
+#currentWeatherEl {
+  border-left: 1px solid #fff;
+  line-height: none;
+}
+
+h1,
+h4 {
+  line-height: 3;
+}
+
+/* 5-Day Forcast */
+#fiveDayForcastEl {
+  border-top: 1px solid #fff;
+  margin-top: 12px;
+}
+
+#forcast-cards {
+  margin: 5px;
+}
+
+footer h3 {
+  color: #6c757d;
+  padding: 10px;
+  text-align: right;
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
 }

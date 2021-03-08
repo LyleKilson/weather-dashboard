@@ -1,16 +1,12 @@
 /* background-img */
-body {
-  background-image: url(../images/rain-background.jpg);
-}
-
-header {
-  background-color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 20px;
+main {
+  background-image: url(../images/4krain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header h1 {
   color: #6c757d;
-  margin-bottom: 20px;
 }
 
 /* search bar input */
@@ -31,19 +27,21 @@ header h1 {
   width: 0;
   caret-color: transparent;
   line-height: 40px;
-  transition: width 0.4s linear;
+  transition: 0.4s linear;
 }
 
 .searchbar:hover > .search_input {
   padding: 0 10px;
   width: 150px;
   caret-color: black;
-  transition: width 0.4s linear;
+  transition: 0.4s linear;
+  
 }
 
 .searchbar:hover > .search_icon {
-  background: #6c757d;
+  background-color: #6c757d;
   color: #fff;
+  
 }
 
 .search_icon {
@@ -90,21 +88,15 @@ h4 {
 #fiveDayForcastEl {
   border-top: 1px solid #fff;
   margin-top: 12px;
+  margin-bottom: 20px;
 }
 
 #forcast-cards {
   margin: 5px;
 }
 
-footer h3 {
-  color: #6c757d;
-  padding: 10px;
-  text-align: right;
-}
-
 footer {
-  background-color: rgba(255, 255, 255, 0.9);
-  margin-top: 20px;
-  position: absolute;
-  bottom: 0;
+  color: #6c757d;
+  height: 30px;
+  text-align: right;
 }

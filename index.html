@@ -25,24 +25,38 @@
   <body>
     <!-- header -->
     <header class="container-fluid text-center text-white">
-      <h1>Weather Dashboard</h1>
+      <h1 class="display-4">Weather Dashboard</h1>
     </header>
     <!-- main body -->
-    <main class="container-fluid">
+    <main>
       <!-- Search input-->
-      <section class="row align-items-center">
-        <div class="container col-sm-3">
-          <div id="searchBtnEl" class="d-flex justify-content-center h-100">
-            <div class="searchbar">
-              <input
-                class="search_input"
-                type="text"
-                name=""
-                placeholder="City Search..."
-              />
-              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+      <section class="d-flex">
+        <div class="container col">
+          <p class="text-white text-center">Search for a City</p>
+          <div class="d-flex">
+            <input
+              id="city-input"
+              type="text"
+              class="form-control"
+              placeholder="Enter city name"
+              aria-label="Enter city name"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="search-button"
+              >
+                <i class="fas fa-search"></i>
+              </button>
             </div>
           </div>
+          <div class="d-flex justify-content-center m-3">
+            <button class="btn btn-secondary" type="button" id="clear-history">
+              Clear history
+            </button>
+          </div>
+
           <!-- city list -->
           <ul
             id="citySelectionEl"
@@ -62,7 +76,7 @@
         <!-- current weather of selected city -->
         <div
           id="currentWeatherEl"
-          class="container-fluid space-between col-sm-9 text-white"
+          class="container-fluid space-between col-9 text-white"
         >
           <h1 class="current-city">"city name here":</h1>
           <h4 class="current-temp">Temperature:</h4>
@@ -74,66 +88,68 @@
       <!-- five day for cast info -->
       <section id="fiveDayForcastEl" class="container-fluid">
         <h1 class="text-white">5-Day Forcast</h1>
-        <div
-          id="forcast-cards"
-          class="d-flex row align-items-stretch"
-        >
-          <div class="card" style="width: 13rem">
+        <div id="forcast-cards" class="d-flex row">
+          <div class="col-md card m-2">
             <img class="card-img-top" src="..." alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                minima in quia obcaecati error soluta debitis quo sequi dolores
+                quod molestiae modi quaerat, suscipit voluptatem fuga.
+                Dignissimos vitae corrupti ex!
               </p>
             </div>
           </div>
-          <div class="card" style="width: 13rem">
+          <div class="col-md card m-2">
+            <img class="card-img-top" src="..." alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title text-center">0</h5>
+              <div class="card-text">
+                <p>Temperature:</p>
+                <p>Humidity:</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md card m-2">
+            <img class="card-img-top" src="..." alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Date</h5>
+              <div class="card-text">
+                <p>Temperature:</p>
+                <p>Humidity:</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md card m-2">
             <img class="card-img-top" src="..." alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                minima in quia obcaecati error soluta debitis quo sequi dolores
+                quod molestiae modi quaerat, suscipit voluptatem fuga.
+                Dignissimos vitae corrupti ex!
               </p>
             </div>
           </div>
-          <div class="card" style="width: 13rem">
+          <div class="col-md card m-2">
             <img class="card-img-top" src="..." alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-          <div class="card" style="width: 13rem">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-          <div class="card" style="width: 13rem">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                minima in quia obcaecati error soluta debitis quo sequi dolores
+                quod molestiae modi quaerat, suscipit voluptatem fuga.
+                Dignissimos vitae corrupti ex!
               </p>
             </div>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="container-fluid text-white">
-      <h3>Made by Kyle Wilson's big 🧠</h3>
+    <footer class="container-fluid text-end">
+      <small> Made by Kyle Wilson's big 🧠</small>
     </footer>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

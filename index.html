@@ -1,106 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
     <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <!-- local CSS -->
-    <link href="./assets/css/style.css" rel="stylesheet" />
-    <title>weather-dashboard</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
+
   <body>
-    <!-- header -->
-    <header class="container-fluid text-center text-white">
-      <h1 class="display-4">Weather Dashboard</h1>
-    </header>
-    <!-- main body -->
-    <main>
-      <!-- Search input-->
-      <section class="d-flex">
-        <div class="container col">
-          <p class="text-white text-center">Search for a City</p>
-          <div class="d-flex">
-            <input
-              id="city-input"
-              type="text"
-              class="form-control"
-              placeholder="Enter city name"
-              aria-label="Enter city name"
-            />
-            <div class="input-group-append">
-              <button
-                class="btn btn-secondary"
-                type="button"
-                id="search-button"
-              >
-                <i class="fas fa-search"></i>
-              </button>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d3bce829f3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body text-center bg-dark text-white">
+          <h1>Weather Dashboard</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card-body text-center">
+
+              <div class="card" style="width: 18rem">
+                <div class="card-body bg-light">
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Search For A City
+                  </h6>
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control searchInput"
+                      placeholder="Enter City Name"
+                      aria-label="Recipient's username"
+                      aria-describedby="button-addon2"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline-secondary bg-primary searchButton"
+                        type="button"
+                        id="button-addon2"
+                      >
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <ul class="list-group"></ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="d-flex justify-content-center m-3">
-            <button class="btn btn-secondary" type="button" id="clear-history">
-              Clear history
-            </button>
+          <div class="col mt-4 mr-5">
+            <div class="card currentCard pb-2 pt-1">
+              <h5 class="card-title mt-2 text-center">Current Forecast</h5>
+            </div>
           </div>
+          <div class="row">
+            <div class="col mt-4">
+              <div class="card pb-5 fiveDayCard pl-5">
+               
+                <h5 class="card-title mt-2 mr-5">5-Day Forecast</h5>
+                <div class="row">
+                  <div class="col fiveDayOne"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- city list -->
-          <ul
-            id="citySelectionEl"
-            class="list-group list-group-flush text-center text-white"
-          >
-            <li class="list-group-item"><a type="button">Seattle</a></li>
-            <li class="list-group-item"><a type="button">San Francisco</a></li>
-            <li class="list-group-item"><a type="button">Las Vegas</a></li>
-            <li class="list-group-item"><a type="button">Salt Lake City</a></li>
-            <li class="list-group-item"><a type="button">Denver</a></li>
-            <li class="list-group-item"><a type="button">New York</a></li>
-            <li class="list-group-item"><a type="button">Austin</a></li>
-            <li class="list-group-item"><a type="button">Atlanta</a></li>
-            <li class="list-group-item"><a type="button">Chicago</a></li>
-          </ul>
-        </div>
-        <!-- current weather of selected city -->
-        <div
-          id="currentWeatherEl"
-          class="container-fluid space-between col-9 text-white"
-        >
-          <h1 class="current-city">"city name here"</h1>
-          <h4 class="current-temp">Temperature:</h4>
-          <h4 class="current-humidity">Humidity:</h4>
-          <h4 class="current-windspeed">Wind Speed:</h4>
-          <h4 class="current-uv-index">UV Index:</h4>
-        </div>
-      </section>
-      <!-- five day for cast info -->
-      <section id="fiveDayForcastEl" class="row">
-        <h1 class="text-white">5-Day Forcast</h1>
-        <div class="col forecast bg-white text-secondary ml-3 m-3 rounded">p</div>
-        <div class="col forecast bg-white text-secondary ml-3 m-3 rounded">p</div>
-        <div class="col forecast bg-white text-secondary ml-3 m-3 rounded">p</div>
-        <div class="col forecast bg-white text-secondary ml-3 m-3 rounded">p</div>
-        <div class="col forecast bg-white text-secondary ml-3 m-3 rounded">p</div>
-      </section>
-    </main>
-    <footer class="container-fluid text-end">
-      <small> Made by Kyle Wilson's big 🧠</small>
-    </footer>
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- local JavaScript -->
-    <script src="./assets/js/script.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
 </html>

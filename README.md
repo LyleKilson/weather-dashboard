@@ -1,5 +1,5 @@
 # weather-dashboard ⛅️
-Server-Side APIs Challenge
+Server-Side API web application
 
 ## Description
 A simple web application that displays the weather for different cities on a dashboard that runs in the browser and features dynamically updated HTML and CSS.

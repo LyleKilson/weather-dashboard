@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+html {
+  background-image: url(../images/4krain.jpg);
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -10,9 +17,9 @@ body {
 button{
   width: 70px;
   height: auto;
-  background-color: #ff9f43;
-  border: none;
-  border-radius: 5px;
+  background-color: #d6ff43;
+  border: 1px #2f3640;
+  border-radius: 15px;
   transition-duration: .4s;
 }
 
@@ -71,6 +78,7 @@ input {
 }
 
 .forecast {
+  color: #fff;
   margin-top: 25px;
   border: solid 1px #cecfd2;
   margin-left: 5%;
@@ -81,6 +89,7 @@ input {
 
 
 .five-day-container h1 {
+  color: #fff;
   margin-top: 25px;
   margin-left: 5%;
 }
